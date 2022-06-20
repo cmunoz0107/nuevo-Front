@@ -1,4 +1,3 @@
-// @mui material components
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 
@@ -15,7 +14,7 @@ import DataTable from "examples/Tables/DataTable";
 // Data
 import authorsTableData from "layouts/tables/data/authorsTableData";
 
-function Tables() {
+function registroBodeguero() {
   const { columns, rows } = authorsTableData();
   // const { columns: pColumns, rows: pRows } = projectsTableData();
 
@@ -37,7 +36,7 @@ function Tables() {
                 coloredShadow="info"
               >
                 <MDTypography variant="h6" color="white">
-                  Productos
+                  Registro Bodegueros
                 </MDTypography>
               </MDBox>
               <MDBox pt={3}>
@@ -58,4 +57,4 @@ function Tables() {
   );
 }
 
-export default Tables;
+export default registroBodeguero;
