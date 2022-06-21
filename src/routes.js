@@ -1,8 +1,5 @@
-import Dashboard from "layouts/dashboard";
-import Tables from "layouts/tables";
-import SignIn from "layouts/authentication/sign-in";
-// import SignUp from "layouts/authentication/sign-up";
-import RegistroProducto from "layouts/registroProductos";
+import Productos from "layouts/productos";
+// import RegistroProducto from "layouts/registroProductos";
 import Usuarios from "layouts/usuarios";
 import RegistroChofer from "layouts/registroChofer/registroChofer";
 import ListadoIngresos from "layouts/ingresoProductos/listadoIngresos/listadoIngresos";
@@ -15,11 +12,11 @@ import ListadoDespacho from "layouts/despacho/listadoDespachos/listadoDespachos"
 const routes = [
   {
     type: "collapse",
-    name: "Home",
-    key: "dashboard",
-    icon: <Icon fontSize="small">dashboard</Icon>,
-    route: "/dashboard",
-    component: <Dashboard />,
+    name: "Productos",
+    key: "productos",
+    icon: <Icon fontSize="small">table_view</Icon>,
+    route: "/productos",
+    component: <Productos />,
   },
   {
     type: "collapse",
@@ -69,14 +66,7 @@ const routes = [
     route: "/usuarios",
     component: <Usuarios />,
   },
-  {
-    type: "collapse",
-    name: "Productos",
-    key: "tables",
-    icon: <Icon fontSize="small">table_view</Icon>,
-    route: "/tables",
-    component: <Tables />,
-  },
+
   {
     type: "collapse",
     name: "Registro Chofer",
@@ -84,23 +74,6 @@ const routes = [
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/registroChofer",
     component: <RegistroChofer />,
-  },
-
-  {
-    type: "collapse",
-    name: "Registro producto",
-    key: "registroProductos",
-    icon: <Icon fontSize="small">table_view</Icon>,
-    route: "/registro_Producto",
-    component: <RegistroProducto />,
-  },
-  {
-    type: "collapse",
-    name: "Iniciar sesion",
-    key: "sign-in",
-    icon: <Icon fontSize="small">login</Icon>,
-    route: "/authentication/sign-in",
-    component: <SignIn />,
   },
 ];
 

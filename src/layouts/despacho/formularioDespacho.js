@@ -238,7 +238,7 @@ function Formulario() {
                     onChange={(e) => setFechaDeEgreso(e.target.value)}
                     value={fechaDeEgreso}
                     type="date"
-                    label="Fecha de Egreso"
+                    // label="Fecha de Egreso"
                     fullWidth
                   />
                 </MDBox>

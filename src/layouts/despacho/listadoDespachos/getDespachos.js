@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 export default function data() {
-  const [ingresos, setIngresos] = useState([]);
+  const [egresos, setEgresos] = useState([]);
   const getIngresos = async () => {
     try {
       const response = await axios.get("http://localhost:8080/getDespachos", {
@@ -12,7 +12,7 @@ export default function data() {
         },
       });
       const elements = response.data;
-      setIngresos(elements);
+      setEgresos(elements);
     } catch (error) {
       console.log(error);
     }
@@ -38,6 +38,6 @@ export default function data() {
       { Header: "Bodega", accessor: "bodega", align: "left" },
     ],
 
-    rows: ingresos,
+    rows: egresos,
   };
 }

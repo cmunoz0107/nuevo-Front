@@ -32,7 +32,7 @@ function Basic() {
         setLoading(false);
         const { valid } = response.data;
         if (valid) {
-          navigate("/dashboard");
+          navigate("/productos");
         }
       } catch (error) {
         setLoading(false);
