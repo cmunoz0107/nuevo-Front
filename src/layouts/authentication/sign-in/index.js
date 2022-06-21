@@ -22,16 +22,15 @@ function Basic() {
         const response = await axios.post("http://localhost:8080/login", {
           headers: {
             "Access-Control-Allow-Origin": "*",
-            "Content-Type": "application/x-www-form-urlencoded"
+            "Content-Type": "application/x-www-form-urlencoded",
           },
           credentials: {
             email,
-            password
-          }
+            password,
+          },
         });
         setLoading(false);
         const { valid } = response.data;
-        console.log(valid);
         if (valid) {
           console.log(valid);
           navigate("/dashboard");

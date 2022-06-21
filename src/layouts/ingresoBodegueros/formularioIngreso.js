@@ -21,32 +21,39 @@ function Formulario() {
   const [notification, setNotification] = useState({});
   const closeNotification = () => setShowNotification(false);
 
+  const resetValues = () => {
+    setApellido("");
+    setCorreo("");
+    setNombre("");
+    setPassword("");
+  };
+
   const registerUser = async () => {
     if (nombre && apellidos && correo && password) {
       const response = await axios.post("http://localhost:8080/registerUser", {
         headers: {
           "Access-Control-Allow-Origin": "*",
-          "Content-Type": "application/x-www-form-urlencoded"
+          "Content-Type": "application/x-www-form-urlencoded",
         },
         data: {
           nombre,
           apellidos,
           correo,
-          password
-        }
+          password,
+        },
       });
-      console.log(response.data);
       setShowNotification(true);
-      if (response.data === "Usuario Creado")
+      if (response.data === "Usuario Creado") {
         setNotification({ color: "success", label: "Usuario creado" });
+        resetValues();
+      }
+
       if (response.data === "Usuario ya existe")
         setNotification({ color: "warning", label: "Usuario ya existe" });
-      console.log(showNotification);
-      console.log(notification);
+
       setTimeout(closeNotification, 3000);
     }
   };
-
   return (
     <DashboardLayout>
       <DashboardNavbar />
@@ -90,6 +97,7 @@ function Formulario() {
                 <MDBox mb={2}>
                   <MDInput
                     onChange={(e) => setNombre(e.target.value)}
+                    value={nombre}
                     type="text"
                     label="Nombre"
                     variant="standard"
@@ -99,6 +107,7 @@ function Formulario() {
                 <MDBox mb={2}>
                   <MDInput
                     onChange={(e) => setApellido(e.target.value)}
+                    value={apellidos}
                     type="text"
                     label="Apellido"
                     variant="standard"
@@ -108,6 +117,7 @@ function Formulario() {
                 <MDBox mb={2}>
                   <MDInput
                     onChange={(e) => setCorreo(e.target.value)}
+                    value={correo}
                     type="email"
                     label="Email"
                     variant="standard"
@@ -117,6 +127,7 @@ function Formulario() {
                 <MDBox mb={2}>
                   <MDInput
                     onChange={(e) => setPassword(e.target.value)}
+                    value={password}
                     type="password"
                     label="Password"
                     variant="standard"

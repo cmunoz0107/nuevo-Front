@@ -12,11 +12,10 @@ import Footer from "examples/Footer";
 import DataTable from "examples/Tables/DataTable";
 
 // Data
-import authorsTableData from "layouts/tables/data/authorsTableData";
+import users from "./table/getusers";
 
-function registroBodeguero() {
-  const { columns, rows } = authorsTableData();
-  // const { columns: pColumns, rows: pRows } = projectsTableData();
+function Usuarios() {
+  const { columns, rows } = users();
 
   return (
     <DashboardLayout>
@@ -36,7 +35,7 @@ function registroBodeguero() {
                 coloredShadow="info"
               >
                 <MDTypography variant="h6" color="white">
-                  Registro Bodegueros
+                  Usuarios
                 </MDTypography>
               </MDBox>
               <MDBox pt={3}>
@@ -57,4 +56,4 @@ function registroBodeguero() {
   );
 }
 
-export default registroBodeguero;
+export default Usuarios;

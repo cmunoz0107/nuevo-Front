@@ -3,7 +3,7 @@ import Tables from "layouts/tables";
 import SignIn from "layouts/authentication/sign-in";
 // import SignUp from "layouts/authentication/sign-up";
 import RegistroProducto from "layouts/registroProductos";
-import RegistroBodeguero from "layouts/registroBodegueros";
+import Usuarios from "layouts/usuarios";
 import RegistroChofer from "layouts/registroChofer/registroChofer";
 import RegistroProveedor from "layouts/proveedor/registro_Proveedor";
 import Icon from "@mui/material/Icon";
@@ -16,7 +16,7 @@ const routes = [
     key: "dashboard",
     icon: <Icon fontSize="small">dashboard</Icon>,
     route: "/dashboard",
-    component: <Dashboard />
+    component: <Dashboard />,
   },
   {
     type: "collapse",
@@ -24,7 +24,15 @@ const routes = [
     key: "sign-up",
     icon: <Icon fontSize="small">assignment</Icon>,
     route: "/authentication/sign-up",
-    component: <Formulario />
+    component: <Formulario />,
+  },
+  {
+    type: "collapse",
+    name: "usuarios",
+    key: "usuarios",
+    icon: <Icon fontSize="small">table_view</Icon>,
+    route: "/usuarios",
+    component: <Usuarios />,
   },
   {
     type: "collapse",
@@ -32,23 +40,16 @@ const routes = [
     key: "tables",
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/tables",
-    component: <Tables />
+    component: <Tables />,
   },
-  {
-    type: "collapse",
-    name: "Registro Bodeguero",
-    key: "registroBodegueros",
-    icon: <Icon fontSize="small">table_view</Icon>,
-    route: "/registroBodeguero",
-    component: <RegistroBodeguero />
-  },
+
   {
     type: "collapse",
     name: "Registro Chofer",
     key: "registroChofer",
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/registroChofer",
-    component: <RegistroChofer />
+    component: <RegistroChofer />,
   },
   {
     type: "collapse",
@@ -56,7 +57,7 @@ const routes = [
     key: "registroProveedor",
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/registroProveedor",
-    component: <RegistroProveedor />
+    component: <RegistroProveedor />,
   },
   {
     type: "collapse",
@@ -64,7 +65,7 @@ const routes = [
     key: "registroProductos",
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/registro_Producto",
-    component: <RegistroProducto />
+    component: <RegistroProducto />,
   },
   {
     type: "collapse",
@@ -72,7 +73,7 @@ const routes = [
     key: "ingresoProductos",
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/tables",
-    component: <Tables />
+    component: <Tables />,
   },
   {
     type: "collapse",
@@ -80,8 +81,8 @@ const routes = [
     key: "sign-in",
     icon: <Icon fontSize="small">login</Icon>,
     route: "/authentication/sign-in",
-    component: <SignIn />
-  }
+    component: <SignIn />,
+  },
 ];
 
 export default routes;
