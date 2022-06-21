@@ -5,9 +5,10 @@ import SignIn from "layouts/authentication/sign-in";
 import RegistroProducto from "layouts/registroProductos";
 import Usuarios from "layouts/usuarios";
 import RegistroChofer from "layouts/registroChofer/registroChofer";
-import RegistroProveedor from "layouts/proveedor/registro_Proveedor";
+import ListadoIngresos from "layouts/ingresoProductos/listadoIngresos/listadoIngresos";
 import Icon from "@mui/material/Icon";
 import Formulario from "layouts/ingresoBodegueros/formularioIngreso";
+import IngresoProductos from "layouts/ingresoProductos/ingresoProductos";
 
 const routes = [
   {
@@ -17,6 +18,22 @@ const routes = [
     icon: <Icon fontSize="small">dashboard</Icon>,
     route: "/dashboard",
     component: <Dashboard />,
+  },
+  {
+    type: "collapse",
+    name: "ingreso Productos",
+    key: "ingresoProductos",
+    icon: <Icon fontSize="small">table_view</Icon>,
+    route: "/ingresoProductos",
+    component: <IngresoProductos />,
+  },
+  {
+    type: "collapse",
+    name: "Listado de ingresos",
+    key: "listadoIngresos",
+    icon: <Icon fontSize="small">table_view</Icon>,
+    route: "/listadoIngreso",
+    component: <ListadoIngresos />,
   },
   {
     type: "collapse",
@@ -51,14 +68,14 @@ const routes = [
     route: "/registroChofer",
     component: <RegistroChofer />,
   },
-  {
-    type: "collapse",
-    name: "Registro Proveedor",
-    key: "registroProveedor",
-    icon: <Icon fontSize="small">table_view</Icon>,
-    route: "/registroProveedor",
-    component: <RegistroProveedor />,
-  },
+  // {
+  //   type: "collapse",
+  //   name: "Registro Proveedor",
+  //   key: "registroProveedor",
+  //   icon: <Icon fontSize="small">table_view</Icon>,
+  //   route: "/registroProveedor",
+  //   component: <RegistroProveedor />,
+  // },
   {
     type: "collapse",
     name: "Registro producto",
@@ -66,14 +83,6 @@ const routes = [
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/registro_Producto",
     component: <RegistroProducto />,
-  },
-  {
-    type: "collapse",
-    name: "ingreso Productos",
-    key: "ingresoProductos",
-    icon: <Icon fontSize="small">table_view</Icon>,
-    route: "/tables",
-    component: <Tables />,
   },
   {
     type: "collapse",

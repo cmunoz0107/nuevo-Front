@@ -12,11 +12,10 @@ import Footer from "examples/Footer";
 import DataTable from "examples/Tables/DataTable";
 
 // Data
-import authorsTableData from "layouts/tables/data/authorsTableData";
+import getIngresoProductos from "./getIngresosProductos";
 
-function registroProveedor() {
-  const { columns, rows } = authorsTableData();
-  // const { columns: pColumns, rows: pRows } = projectsTableData();
+function listadoIngresos() {
+  const { columns, rows } = getIngresoProductos();
 
   return (
     <DashboardLayout>
@@ -36,7 +35,7 @@ function registroProveedor() {
                 coloredShadow="info"
               >
                 <MDTypography variant="h6" color="white">
-                  Registro Proveedor
+                  Listado de Ingresos
                 </MDTypography>
               </MDBox>
               <MDBox pt={3}>
@@ -57,4 +56,4 @@ function registroProveedor() {
   );
 }
 
-export default registroProveedor;
+export default listadoIngresos;

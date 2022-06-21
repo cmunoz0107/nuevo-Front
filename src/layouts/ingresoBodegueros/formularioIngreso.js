@@ -50,17 +50,15 @@ function Formulario() {
 
       if (response.data === "Usuario ya existe")
         setNotification({ color: "warning", label: "Usuario ya existe" });
-
-      setTimeout(closeNotification, 3000);
+    } else {
+      setShowNotification(true);
+      setNotification({ color: "warning", label: "Ingrese todos los campos" });
     }
+    setTimeout(closeNotification, 3000);
   };
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <br />
-      {showNotification && (
-        <MDAlert color={notification.color}>{notification.label}</MDAlert>
-      )}
       <Grid container spacing={1} justifyContent="center">
         <Grid item xs={20} sm={20} md={10} lg={8} xl={8}>
           <Card>
@@ -93,6 +91,11 @@ function Formulario() {
               </MDTypography>
             </MDBox>
             <MDBox pt={4} pb={3} px={3}>
+              {showNotification && (
+                <MDAlert color={notification.color} dismissible>
+                  {notification.label}
+                </MDAlert>
+              )}
               <MDBox component="form" role="form">
                 <MDBox mb={2}>
                   <MDInput
