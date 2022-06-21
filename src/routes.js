@@ -9,6 +9,8 @@ import ListadoIngresos from "layouts/ingresoProductos/listadoIngresos/listadoIng
 import Icon from "@mui/material/Icon";
 import Formulario from "layouts/ingresoBodegueros/formularioIngreso";
 import IngresoProductos from "layouts/ingresoProductos/ingresoProductos";
+import Despacho from "layouts/despacho/formularioDespacho";
+import ListadoDespacho from "layouts/despacho/listadoDespachos/listadoDespachos";
 
 const routes = [
   {
@@ -37,6 +39,22 @@ const routes = [
   },
   {
     type: "collapse",
+    name: "Despacho de productos",
+    key: "despachoProductos",
+    icon: <Icon fontSize="small">table_view</Icon>,
+    route: "/despacho",
+    component: <Despacho />,
+  },
+  {
+    type: "collapse",
+    name: "Listado de Despachos ",
+    key: "listadoDespacho",
+    icon: <Icon fontSize="small">table_view</Icon>,
+    route: "/listadoDespacho",
+    component: <ListadoDespacho />,
+  },
+  {
+    type: "collapse",
     name: "Registrar Usuario",
     key: "sign-up",
     icon: <Icon fontSize="small">assignment</Icon>,
@@ -59,7 +77,6 @@ const routes = [
     route: "/tables",
     component: <Tables />,
   },
-
   {
     type: "collapse",
     name: "Registro Chofer",
@@ -68,14 +85,7 @@ const routes = [
     route: "/registroChofer",
     component: <RegistroChofer />,
   },
-  // {
-  //   type: "collapse",
-  //   name: "Registro Proveedor",
-  //   key: "registroProveedor",
-  //   icon: <Icon fontSize="small">table_view</Icon>,
-  //   route: "/registroProveedor",
-  //   component: <RegistroProveedor />,
-  // },
+
   {
     type: "collapse",
     name: "Registro producto",

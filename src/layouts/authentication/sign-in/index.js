@@ -32,7 +32,6 @@ function Basic() {
         setLoading(false);
         const { valid } = response.data;
         if (valid) {
-          console.log(valid);
           navigate("/dashboard");
         }
       } catch (error) {
