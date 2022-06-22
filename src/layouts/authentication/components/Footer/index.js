@@ -31,7 +31,7 @@ function Footer({ light }) {
             color={light ? "white" : "text"}
             fontSize={size.sm}
           >
-            &copy; {new Date().getFullYear()}, Creado por 
+            &copy; {new Date().getFullYear()}, Creado por el idiota del claudio.
           </MDBox>
         </MDBox>
       </Container>

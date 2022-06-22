@@ -8,6 +8,7 @@ import Formulario from "layouts/ingresoBodegueros/formularioIngreso";
 import IngresoProductos from "layouts/ingresoProductos/ingresoProductos";
 import Despacho from "layouts/despacho/formularioDespacho";
 import ListadoDespacho from "layouts/despacho/listadoDespachos/listadoDespachos";
+import SignIn from "layouts/authentication/sign-in";
 
 const routes = [
   {
@@ -74,6 +75,14 @@ const routes = [
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/registroChofer",
     component: <RegistroChofer />,
+  },
+  {
+    type: "collapse",
+    name: "Cerrar Sesion",
+    key: "authentication",
+    icon: <Icon fontSize="small">table_view</Icon>,
+    route: "/authentication/sign-in",
+    component: <SignIn />,
   },
 ];
 
