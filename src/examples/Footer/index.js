@@ -21,7 +21,7 @@ function Footer() {
         fontSize={size.sm}
         px={1.5}
       >
-        &copy; {new Date().getFullYear()}, creado por
+        &copy; {new Date().getFullYear()}, creado por Nicolas, Patricio, Claudio
       </MDBox>
     </MDBox>
   );

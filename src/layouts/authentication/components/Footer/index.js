@@ -31,7 +31,7 @@ function Footer({ light }) {
             color={light ? "white" : "text"}
             fontSize={size.sm}
           >
-            &copy; {new Date().getFullYear()}, Creado por el idiota del claudio.
+            &copy; {new Date().getFullYear()}, Creado por Nicolas, Patricio, claudio.
           </MDBox>
         </MDBox>
       </Container>
@@ -40,11 +40,11 @@ function Footer({ light }) {
 }
 
 Footer.defaultProps = {
-  light: false
+  light: false,
 };
 
 Footer.propTypes = {
-  light: PropTypes.bool
+  light: PropTypes.bool,
 };
 
 export default Footer;
